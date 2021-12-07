@@ -10,7 +10,7 @@ $('.clients__social').slick({
         `<button type='button' class='slick-next pull-right slick-arrow'><ion-icon name="chevron-forward-outline"></ion-icon></button>`,
     responsive: [
         {
-            breakpoint: 1024,
+            breakpoint: 1373,
             settings: {
                 slidesToShow: 4,
                 arrows: false,

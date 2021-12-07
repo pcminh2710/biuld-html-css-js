@@ -1000,6 +1000,7 @@ button.pricing__order-btn.btncolor {
 
 .infomation__right__item-last p {
   margin-top: 60px;
+  padding-bottom: 60px;
   font-size: 14px;
   line-height: 22px;
   color: #ffffff;
@@ -1007,7 +1008,15 @@ button.pricing__order-btn.btncolor {
   text-align: right;
 }
 
-@media (max-width: 1539px) {
+@media (max-width: 1211px) {
+  .header,
+  .content__top,
+  .feature {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
   .feature__content {
     padding-bottom: 186px;
     -webkit-box-pack: center;
@@ -1056,6 +1065,7 @@ button.pricing__order-btn.btncolor {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 100%;
   }
 
   .pricing__order__item {
@@ -1634,7 +1644,32 @@ button.pricing__order-btn.btncolor {
   }
 }
 
-@media (min-width: 1540px) and (max-width: 1890px) {
+@media (min-width: 1212px) and (max-width: 1890px) {
+  .header,
+  .content__top,
+  .feature {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .speci__contact,
+  .speci__support,
+  .pricing__order {
+    width: 80%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .feature__content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .contact {
+    width: 80%;
+  }
+
   .input-top input,
   .input-bottom input {
     width: 42%;
@@ -1654,7 +1689,7 @@ button.pricing__order-btn.btncolor {
   }
 
   .pricing__order__item {
-    width: 310px;
+    width: 320px;
   }
 
   .pricing__order-btn {
@@ -1662,11 +1697,11 @@ button.pricing__order-btn.btncolor {
   }
 
   .aboutus__info {
-    padding-left: 200px;
+    padding-left: 100px;
   }
 }
 
-@media (min-width: 769px) and (max-width: 1315px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .mobile {
     display: block;
   }
@@ -1692,10 +1727,19 @@ button.pricing__order-btn.btncolor {
   .content__top {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .content__top__right {
     margin: 100px auto;
+  }
+
+  .content__top__left {
+    padding-top: 180px;
+    margin: 0 auto;
   }
 
   .feature__content {
