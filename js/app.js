@@ -74,4 +74,10 @@ $('.pricing__order__mobile').slick({
 function showMenu() {
     document.querySelector('.menu-mobile').classList.toggle('show');
 }
+// cuộn trang
+
+    document.querySelector(".btn-up").onclick = function() {
+        window.scrollTo(0, 0);
+    };
+
 
