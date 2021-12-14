@@ -1,6 +1,6 @@
 //slide social
 $('.clients__social').slick({
-    infinite: false,
+    infinite: true,
     slidesToShow: 6,
     slidesToScroll: 1,
     arrows: true,
@@ -10,17 +10,25 @@ $('.clients__social').slick({
         `<button type='button' class='slick-next pull-right slick-arrow'><ion-icon name="chevron-forward-outline"></ion-icon></button>`,
     responsive: [
         {
+            breakpoint: 768,
+            settings: "unslick"
+               
+        },
+        {
             breakpoint: 1373,
             settings: {
                 slidesToShow: 4,
                 arrows: false,
                 dots: false
+               
+
             }
         }
+     
     ]
 });
 //slide rewwiew
-$('.review__items').slick({
+$('.review__list').slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -31,7 +39,7 @@ $('.review__items').slick({
     responsive: [
         // review mobile
         {
-            breakpoint: 600,
+            breakpoint: 769,
             settings: {
                 slidesToShow: 1,
                 dots: false,
@@ -57,7 +65,9 @@ $('.aboutus__img__slide').slick({
 });
 
 //slide pricing__order__mobile
-$('.pricing__order__mobile').slick({
+// slider
+$slick_slider = $('.pricing__list');
+settings_slider = {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -68,7 +78,25 @@ $('.pricing__order__mobile').slick({
         `<button type='button' class='slick-prev pull-left slick-arrow-mobile'><ion-icon name="chevron-back-outline"></ion-icon></button>`,
     nextArrow:
         `<button type='button' class='slick-next pull-right slick-arrow-mobile'><ion-icon name="chevron-forward-outline"></ion-icon></button>`,
-});
+    
+}
+slick_on_mobile( $slick_slider, settings_slider);
+
+// slick on mobile
+  function slick_on_mobile(slider, settings){
+    $(window).on('load resize', function() {
+      if ($(window).width() > 768) {
+        if (slider.hasClass('slick-initialized')) {
+          slider.slick('unslick');
+        }
+        return
+      }
+      if (!slider.hasClass('slick-initialized')) {
+        return slider.slick(settings);
+      }
+    });
+  };
+//end
 
 // show menu
 function showMenu() {
